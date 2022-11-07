@@ -18,19 +18,7 @@ export default function Home() {
   function handleSubmit(event:React.FormEvent<HTMLFormElement>) {
     alert('A name was submitted: ' + label);
     event.preventDefault();
-    const str1 = 'https://alt.edge.mile-two.com/api/tag/'
-    const str2 = str1.concat('', label);
-    // fetch(str2);
-    useEffect(() => {
-      setLoading(true)
-      fetch(str2)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data)
-          setData(data)
-          setLoading(false)
-        })
-    }, [])
+
 
   }
 
@@ -38,19 +26,19 @@ export default function Home() {
     setlabel(event.target.value)
   }
 
-  // useEffect(() => {
-  //   setLoading(true)
-  //   fetch('/api/test')
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data)
-  //       setData(data)
-  //       setLoading(false)
-  //     })
-  // }, [])
+  useEffect(() => {
+    setLoading(true)
+    fetch('/api/test')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setData(data)
+        setLoading(false)
+      })
+  }, [])
   
   if (isLoading) return <p>Loading...</p>
-  // if (!data) return <p>No profile data</p>
+  if (!data) return <p>No profile data</p>
 
   
   return (
