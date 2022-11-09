@@ -8,8 +8,11 @@ type Data = {
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
-) {
-    const result = await fetch('https://alt.edge.mile-two.com/api/tag/intel/text')
+) { console.log(req.query.testlabel)
+  //res.status(200).json(req.query.aaron)
+  const labelfromui = req.query.testlabel  
+  const result = await fetch('https://alt.edge.mile-two.com/api/tag/' + labelfromui + '/text')
+  
     if(result){ 
         res.status(200).json(await result.json())
     }else 

@@ -16,10 +16,15 @@ export default function Home() {
   const [label, setlabel] = useState("")
 
   function handleSubmit(event:React.FormEvent<HTMLFormElement>) {
-    alert('A name was submitted: ' + label);
+    // alert('A name was submitted: ' + label);
+    fetch('/api/test?testlabel=' + label)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data)
+        setData(data)
+        setLoading(false)
+      })
     event.preventDefault();
-
-
   }
 
   function handleChange(event:React.ChangeEvent<HTMLInputElement>) {
