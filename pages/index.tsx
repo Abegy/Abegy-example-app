@@ -72,7 +72,7 @@ export default function Home() {
       <div className={styles.body}>
         {data?.map((item) => (
    item.texts.map((text:any) => (
-    <p><Link href={`entry/${item.id}`}>{text.longName}</Link></p>
+    <p><Link href={`entry/${text.id}`}>{text.longName}</Link></p>
   ))
  ))}
     </div>
