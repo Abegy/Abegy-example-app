@@ -7,6 +7,7 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import useSWR from 'swr'
 import { createSemicolonClassElement } from 'typescript'
+import Link from 'next/link'
 
 
 
@@ -71,7 +72,7 @@ export default function Home() {
       <div className={styles.body}>
         {data?.map((item) => (
    item.texts.map((text:any) => (
-    <p>{text.longName}</p>
+    <p><Link href={`entry/${item.id}`}>{text.longName}</Link></p>
   ))
  ))}
     </div>

@@ -16,5 +16,5 @@ export default async function handler(
     if(result){ 
         res.status(200).json(await result.json())
     }else 
-    res.status(500).json('failure')
+    res.status(500)
 }
