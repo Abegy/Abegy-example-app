@@ -1,9 +1,19 @@
+import styles from "../../styles/definition.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 const Entry = () => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<
+    | {
+        abbreviation: string;
+        description: string;
+        longName: string;
+        id: number;
+        tags: [{ id: number; name: string }];
+      }
+    | undefined
+  >(undefined);
   const [isLoading, setLoading] = useState(false);
   const [uiid, setid] = useState("");
   const router = useRouter();
@@ -45,13 +55,15 @@ const Entry = () => {
 
   return (
     <div>
-      return{" "}
-      {Object.values(data).map((value, index) => (
-        <div key={index}>
-          <h2>{value}</h2>
-          <hr />
-        </div>
-      ))}
+      {data !== undefined ? (
+        <>
+          <h1 className={styles.main}>{data.abbreviation}</h1>
+          <h2>{data.longName}</h2>
+          <p>{data.description}</p>
+        </>
+      ) : (
+        <h1>no data to display</h1>
+      )}
     </div>
   );
 };
