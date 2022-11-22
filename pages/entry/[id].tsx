@@ -54,10 +54,10 @@ const Entry = () => {
   //   {Object.values(data).map((value, index)
 
   return (
-    <div>
+    <div className={styles.main}>
       {data !== undefined ? (
         <>
-          <h1 className={styles.main}>{data.abbreviation}</h1>
+          <h1>{data.abbreviation}</h1>
           <h2>{data.longName}</h2>
           <p>{data.description}</p>
         </>
