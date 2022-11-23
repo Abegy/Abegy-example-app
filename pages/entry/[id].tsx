@@ -31,27 +31,17 @@ const Entry = () => {
       });
   }, []);
 
-  useEffect(() => {
-    setLoading(true);
-    fetch("/api/entry")
-      // https://alt.edge.mile-two.com/api/text/13
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
-
-  //   const displayfields = () => {
-  //     let html = "";
-  //     for (const property in data) {
-  //       html += `<div> ${property}: ${data[property]}</div>`;
-  //     }
-  //     return html;
-  //   };
-
-  //   {Object.values(data).map((value, index)
+  //   useEffect(() => {
+  //     setLoading(true);
+  //     fetch("/api/entry")
+  //       // https://alt.edge.mile-two.com/api/text/13
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         console.log(data);
+  //         setData(data);
+  //         setLoading(false);
+  //       });
+  //   }, []);
 
   return (
     <div className={styles.main}>
