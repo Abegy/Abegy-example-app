@@ -3,19 +3,18 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+interface DataModel {
+  abbreviation: string;
+  description: string;
+  longName: string;
+  id: number;
+  tags: [{ id: number; name: string }];
+}
+
 const Entry = () => {
-  const [data, setData] = useState<
-    | {
-        abbreviation: string;
-        description: string;
-        longName: string;
-        id: number;
-        tags: [{ id: number; name: string }];
-      }
-    | undefined
-  >(undefined);
+  const [data, setData] = useState<DataModel | undefined>(undefined);
   const [isLoading, setLoading] = useState(false);
-  const [uiid, setid] = useState("");
+  //   const [uiid, setid] = useState("");
   const router = useRouter();
   const { id } = router.query;
 
@@ -29,19 +28,10 @@ const Entry = () => {
         console.log(data);
         setLoading(false);
       });
-  }, []);
+  }, [router]);
 
-  //   useEffect(() => {
-  //     setLoading(true);
-  //     fetch("/api/entry")
-  //       // https://alt.edge.mile-two.com/api/text/13
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         console.log(data);
-  //         setData(data);
-  //         setLoading(false);
-  //       });
-  //   }, []);
+  if (isLoading) return <p>Loading...</p>;
+  if (!data) return <p>No profile data</p>;
 
   return (
     <div className={styles.main}>

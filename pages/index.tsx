@@ -59,10 +59,12 @@ export default function Home() {
           </form>
         </div>
         <div className={styles.body}>
-          {data?.map((item) =>
+          {data?.map((item, idx) =>
             item.texts.map((text: any) => (
               <p>
-                <Link href={`entry/${text.id}`}>{text.longName}</Link>
+                <Link key={`link-${idx}`} href={`entry/${text.id}`}>
+                  {text.longName}
+                </Link>
               </p>
             ))
           )}
