@@ -1,12 +1,7 @@
-import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import fetch from "node-fetch";
 import React from "react";
-import { useForm } from "react-hook-form";
-import useSWR from "swr";
-import { createSemicolonClassElement } from "typescript";
 import Link from "next/link";
 
 export default function Home() {
@@ -15,7 +10,6 @@ export default function Home() {
   const [label, setlabel] = useState("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    // alert('A name was submitted: ' + label);
     fetch("/api/test?testlabel=" + label)
       .then((res) => res.json())
       .then((responsedata) => {

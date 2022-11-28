@@ -1,7 +1,6 @@
 import styles from "../../styles/definition.module.css";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 interface DataModel {
   abbreviation: string;
@@ -14,13 +13,11 @@ interface DataModel {
 const Entry = () => {
   const [data, setData] = useState<DataModel | undefined>(undefined);
   const [isLoading, setLoading] = useState(false);
-  //   const [uiid, setid] = useState("");
   const router = useRouter();
   const { id } = router.query;
 
   useEffect(() => {
     fetch("/api/idtest?testid=" + id)
-      // https://alt.edge.mile-two.com/api/text/13
       .then((res) => res.json())
       .then((responsedata) => {
         console.log(responsedata);
@@ -31,7 +28,7 @@ const Entry = () => {
   }, [router]);
 
   if (isLoading) return <p>Loading...</p>;
-  if (!data) return <p>No profile data</p>;
+  if (!data) return <p>No profile data, invalid id</p>;
 
   return (
     <div className={styles.main}>
