@@ -37,6 +37,9 @@ const Entry = () => {
           <h1>{data.abbreviation}</h1>
           <h2>{data.longName}</h2>
           <p>{data.description}</p>
+          {data.tags.map((tag) => (
+            <p>{tag.name}</p>
+          ))}
         </>
       ) : (
         <h1>no data to display</h1>
