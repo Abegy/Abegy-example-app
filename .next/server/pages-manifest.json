@@ -3,6 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/entry/new/[name]": "pages/entry/new/[name].js",
+  "/": "pages/index.js",
+  "/api/test": "pages/api/test.js",
   "/entry/[id]": "pages/entry/[id].js",
-  "/api/test": "pages/api/test.js"
+  "/api/idtest": "pages/api/idtest.js"
 }
