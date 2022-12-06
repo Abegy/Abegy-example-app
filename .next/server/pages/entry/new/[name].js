@@ -18,7 +18,7 @@ exports.modules = {
   \**************************************/
 /***/ ((module) => {
 
-eval("// Exports\nmodule.exports = {\n\t\"main\": \"definition_main__lim1x\",\n\t\"description\": \"definition_description__wwKtT\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvZGVmaW5pdGlvbi5tb2R1bGUuY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9hYmVneS1hcHAvLi9zdHlsZXMvZGVmaW5pdGlvbi5tb2R1bGUuY3NzP2E2NjgiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gRXhwb3J0c1xubW9kdWxlLmV4cG9ydHMgPSB7XG5cdFwibWFpblwiOiBcImRlZmluaXRpb25fbWFpbl9fbGltMXhcIixcblx0XCJkZXNjcmlwdGlvblwiOiBcImRlZmluaXRpb25fZGVzY3JpcHRpb25fX3d3S3RUXCJcbn07XG4iXSwibmFtZXMiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./styles/definition.module.css\n");
+eval("// Exports\nmodule.exports = {\n\t\"main\": \"definition_main__lim1x\",\n\t\"description\": \"definition_description__wwKtT\",\n\t\"tagborder\": \"definition_tagborder__Xo1XV\"\n};\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9zdHlsZXMvZGVmaW5pdGlvbi5tb2R1bGUuY3NzLmpzIiwibWFwcGluZ3MiOiJBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSIsInNvdXJjZXMiOlsid2VicGFjazovL2FiZWd5LWFwcC8uL3N0eWxlcy9kZWZpbml0aW9uLm1vZHVsZS5jc3M/YTY2OCJdLCJzb3VyY2VzQ29udGVudCI6WyIvLyBFeHBvcnRzXG5tb2R1bGUuZXhwb3J0cyA9IHtcblx0XCJtYWluXCI6IFwiZGVmaW5pdGlvbl9tYWluX19saW0xeFwiLFxuXHRcImRlc2NyaXB0aW9uXCI6IFwiZGVmaW5pdGlvbl9kZXNjcmlwdGlvbl9fd3dLdFRcIixcblx0XCJ0YWdib3JkZXJcIjogXCJkZWZpbml0aW9uX3RhZ2JvcmRlcl9fWG8xWFZcIlxufTtcbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./styles/definition.module.css\n");
 
 /***/ }),
 

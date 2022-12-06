@@ -2,7 +2,7 @@ import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
 import fetch from "node-fetch";
 import React from "react";
-import Link from "next/link";
+import Entry from "components/Entry";
 
 export default function Home() {
   const [data, setData] = useState<any[]>([]);
@@ -55,11 +55,11 @@ export default function Home() {
         <div className={styles.body}>
           {data?.map((item, idx) =>
             item.texts.map((text: any) => (
-              <p>
-                <Link key={`link-${idx}`} href={`entry/${text.id}`}>
-                  {text.longName}
-                </Link>
-              </p>
+              <Entry
+                longName={text.longName}
+                href={`entry/${text.id}`}
+                key={idx}
+              />
             ))
           )}
         </div>

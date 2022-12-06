@@ -41,7 +41,7 @@ const Entry = () => {
           <p className={styles.description}>
             Associated Tags
             {data.tags.map((tag, idx) => (
-              <p>
+              <p className={styles.tagborder}>
                 <Link key={`link-${idx}`} href={`new/${tag.name}`}>
                   {tag.name}
                 </Link>
