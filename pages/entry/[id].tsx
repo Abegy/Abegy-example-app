@@ -1,4 +1,5 @@
 import styles from "../../styles/definition.module.css";
+import { FaBeer } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -35,13 +36,20 @@ const Entry = () => {
     <div className={styles.main}>
       {data !== undefined ? (
         <>
-          <h1>{data.abbreviation}</h1>
-          <h2>{data.longName}</h2>
-          <p>{data.description}</p>
+          <p className={styles.tagdescription}>
+            <h1 className={styles.tagdescription}>
+              Abbreviation: {data.abbreviation}
+            </h1>
+            <h2 className={styles.tagdescription}>
+              Long name: {data.longName}
+            </h2>
+            <p>Description: {data.description}</p>
+          </p>
           <p className={styles.description}>
-            Associated Tags
+            All Associated Tags
             {data.tags.map((tag, idx) => (
               <p className={styles.tagborder}>
+                <FaBeer />
                 <Link key={`link-${idx}`} href={`new/${tag.name}`}>
                   {tag.name}
                 </Link>
@@ -52,6 +60,9 @@ const Entry = () => {
       ) : (
         <h1>no data to display</h1>
       )}
+      <header className={styles.tagborder}>
+        <button onClick={() => router.back()}>Back</button>
+      </header>
     </div>
   );
 };

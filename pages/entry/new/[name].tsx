@@ -28,6 +28,9 @@ const New = () => {
       {data?.map((item) =>
         item.texts.map((text: any) => <p> {text.longName} </p>)
       )}
+      <header className={styles.tagborder}>
+        <button onClick={() => router.back()}>Back</button>
+      </header>
     </div>
   );
 };

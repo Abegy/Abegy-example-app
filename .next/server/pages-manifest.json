@@ -2,5 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/entry/[id]": "pages/entry/[id].js"
+  "/": "pages/index.js",
+  "/entry/[id]": "pages/entry/[id].js",
+  "/api/idtest": "pages/api/idtest.js",
+  "/api/test": "pages/api/test.js",
+  "/entry/new/[name]": "pages/entry/new/[name].js"
 }
