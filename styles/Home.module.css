@@ -15,7 +15,7 @@
 
 .tagborder {
   min-width: 10vh;
-  border: 2px solid red;
+  border: 2px solid whitesmoke;
   justify-content: center;
   display: flex;
 }

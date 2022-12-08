@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css";
 import { useState, useEffect } from "react";
+import { AiFillInfoCircle } from "react-icons/ai";
 import fetch from "node-fetch";
 import React from "react";
 import Entry from "components/Entry";
@@ -42,24 +43,31 @@ export default function Home() {
   return (
     <div className="text-3xl font-bold">
       <main className={styles.main}>
-        <h1 className="text-3xl font-bold underline">Tag Search Tool</h1>
+        <h1 className="text-4xl font-bold underline">Tag Search Tool</h1>
         <div className={styles.main}>
           <form onSubmit={handleSubmit}>
             <label>
-              TAG NAME:
+              Tag Name:
               <input type="text" value={label} onChange={handleChange} />
             </label>
-            <input type="submit" value="Submit" />
+            <h2 className={styles.tagborder}>
+              <br />
+              <input type="submit" value="Submit" />
+            </h2>
           </form>
         </div>
-        <div className={styles.body}>
+        <div className={styles.main}>
           {data?.map((item, idx) =>
             item.texts.map((text: any) => (
-              <Entry
-                longName={text.longName}
-                href={`entry/${text.id}`}
-                key={idx}
-              />
+              <h1>
+                <h2>
+                  <Entry
+                    longName={text.longName}
+                    href={`entry/${text.id}`}
+                    key={idx}
+                  />
+                </h2>
+              </h1>
             ))
           )}
         </div>
